@@ -38,11 +38,11 @@ jobs:
 
       # Step 3: Restore NuGet packages
       - name: Restore dependencies
-        run: dotnet restore StudentManagement.API.sln
+        run: dotnet restore MainSln.API.sln
 
       # Step 4: Build the solution in Release mode
       - name: Build solution
-        run: dotnet build ApiGateway.API.sln --configuration Release --no-restore
+        run: dotnet build MainSln.sln --configuration Release --no-restore
 
       # Step 5: Run unit tests
       #- name: Run tests
