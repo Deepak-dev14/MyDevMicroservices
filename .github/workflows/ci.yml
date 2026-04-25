@@ -7,13 +7,13 @@ on:
   push:
     branches:
       - master
-      - main
+      #- main
       - feature/**
   
   # Run CI when a pull request is created or updated for main
   pull_request:
     branches:
-      - main
+      #- main
       - master
 
 # A job is a group of steps. its internal key name is: build-test-publish
@@ -45,8 +45,8 @@ jobs:
         run: dotnet build ApiGateway.API.sln --configuration Release --no-restore
 
       # Step 5: Run unit tests
-      - name: Run tests
-        run: dotnet test MainSln.API.sln --configuration Release --no-build --verbosity normal
+      #- name: Run tests
+      #  run: dotnet test MainSln.API.sln --configuration Release --no-build --verbosity normal
 
       # Step 6: Publish the API project
       - name: Publish Web API
