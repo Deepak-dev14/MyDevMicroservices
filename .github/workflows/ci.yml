@@ -38,7 +38,7 @@ jobs:
 
       # Step 3: Restore NuGet packages
       - name: Restore dependencies
-        run: dotnet restore MainSln.API.sln
+        run: dotnet restore MainSln.sln
 
       # Step 4: Build the solution in Release mode
       - name: Build solution
@@ -46,7 +46,7 @@ jobs:
 
       # Step 5: Run unit tests
       #- name: Run tests
-      #  run: dotnet test MainSln.API.sln --configuration Release --no-build --verbosity normal
+      #  run: dotnet test MainSln.sln --configuration Release --no-build --verbosity normal
 
       # Step 6: Publish the API project
       - name: Publish Web API
